@@ -1,6 +1,5 @@
 .idea
 .lazybones
-*.iml
 *.class
 .project
 out/
