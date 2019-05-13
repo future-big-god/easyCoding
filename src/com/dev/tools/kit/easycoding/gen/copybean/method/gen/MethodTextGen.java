@@ -1,4 +1,4 @@
-package com.zjf.easycoding.gen.copybean.method.gen;
+package com.dev.tools.kit.easycoding.gen.copybean.method.gen;
 
 
 import com.intellij.psi.PsiMethod;

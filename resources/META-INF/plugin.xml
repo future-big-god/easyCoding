@@ -29,9 +29,13 @@
   </extensions>
 
   <actions>
-    <action id="easycoding.test" class="com.zjf.easycoding.gen.copybean.BeanCopyAction" text="copybean" description="copybean">
+    <action id="easycoding.test" class="com.dev.tools.kit.easycoding.gen.copybean.BeanCopyAction" text="copybean" description="copybean">
       <add-to-group group-id="GenerateGroup" anchor="last"/>
     </action>
+    <action id="com.dev.tools.kit.easycoding.gen.apidoc.CfHtmlGeneratorAction" class="com.dev.tools.kit.easycoding.gen.apidoc.CfHtmlGeneratorAction" text="一键生成api">
+      <add-to-group group-id="EditorLangPopupMenu" anchor="first"/>
+    </action>
+
   </actions>
 
 </idea-plugin>
