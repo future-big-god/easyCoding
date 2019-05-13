@@ -1,8 +1,8 @@
-package com.zjf.easycoding.gen.copybean.method.gen.impl;
+package com.dev.tools.kit.easycoding.gen.copybean.method.gen.impl;
 
+import com.dev.tools.kit.easycoding.gen.copybean.method.gen.MethodTextBuilder;
+import com.dev.tools.kit.easycoding.gen.copybean.method.gen.MethodTextGen;
 import com.intellij.psi.PsiMethod;
-import com.zjf.easycoding.gen.copybean.method.gen.MethodTextBuilder;
-import com.zjf.easycoding.gen.copybean.method.gen.MethodTextGen;
 
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;

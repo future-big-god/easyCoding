@@ -1,9 +1,9 @@
-package com.zjf.easycoding.gen.copybean.method.gen;
+package com.dev.tools.kit.easycoding.gen.copybean.method.gen;
 
+import com.dev.tools.kit.easycoding.gen.copybean.method.gen.impl.CollectionEnum;
+import com.dev.tools.kit.easycoding.gen.copybean.method.gen.impl.ObjectMethodTextGen;
 import com.intellij.psi.PsiMethod;
-import com.zjf.easycoding.gen.copybean.method.gen.impl.CollectionEnum;
-import com.zjf.easycoding.gen.copybean.method.gen.impl.CollectionMethodTextGen;
-import com.zjf.easycoding.gen.copybean.method.gen.impl.ObjectMethodTextGen;
+import com.dev.tools.kit.easycoding.gen.copybean.method.gen.impl.CollectionMethodTextGen;
 
 import java.util.ArrayList;
 import java.util.List;

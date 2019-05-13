@@ -1,4 +1,4 @@
-package com.zjf.easycoding.gen.copybean;
+package com.dev.tools.kit.easycoding.gen.copybean;
 
 import com.intellij.openapi.actionSystem.AnAction;
 import com.intellij.openapi.actionSystem.AnActionEvent;
@@ -8,7 +8,7 @@ import com.intellij.openapi.command.WriteCommandAction;
 import com.intellij.openapi.editor.Editor;
 import com.intellij.psi.*;
 import com.intellij.psi.util.PsiTreeUtil;
-import com.zjf.easycoding.gen.copybean.method.gen.MethodTextGenHolder;
+import com.dev.tools.kit.easycoding.gen.copybean.method.gen.MethodTextGenHolder;
 
 public class BeanCopyAction extends AnAction {
 

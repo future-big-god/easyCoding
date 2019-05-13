@@ -1,8 +1,8 @@
-package com.zjf.easycoding.gen.copybean.method.gen.impl;
+package com.dev.tools.kit.easycoding.gen.copybean.method.gen.impl;
 
+import com.dev.tools.kit.easycoding.gen.copybean.method.gen.MethodTextBuilder;
 import com.intellij.psi.PsiMethod;
-import com.zjf.easycoding.gen.copybean.method.gen.MethodTextBuilder;
-import com.zjf.easycoding.gen.copybean.method.gen.MethodTextGen;
+import com.dev.tools.kit.easycoding.gen.copybean.method.gen.MethodTextGen;
 
 /**
  * @Description:对象方法文本生成器

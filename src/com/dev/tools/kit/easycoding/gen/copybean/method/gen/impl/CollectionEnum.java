@@ -1,4 +1,4 @@
-package com.zjf.easycoding.gen.copybean.method.gen.impl;
+package com.dev.tools.kit.easycoding.gen.copybean.method.gen.impl;
 
 public enum CollectionEnum {
 
