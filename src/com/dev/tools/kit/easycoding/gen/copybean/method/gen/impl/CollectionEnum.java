@@ -2,8 +2,8 @@ package com.dev.tools.kit.easycoding.gen.copybean.method.gen.impl;
 
 public enum CollectionEnum {
 
-    LIST("list","ArrayList"),
-    SET("set","HashSet");
+    LIST("List","ArrayList"),
+    SET("Set","HashSet");
 
     private String name;
 

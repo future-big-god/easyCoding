@@ -2,6 +2,8 @@ package com.dev.tools.kit.easycoding.gen.apidoc;
 
 import com.dev.tools.kit.DocGenerator;
 import com.dev.tools.kit.confluence.ConfluenceDocGenerator;
+import com.dev.tools.kit.domain.DocInfo;
+import com.dev.tools.kit.easycoding.gen.utils.PsiUtils;
 import com.intellij.openapi.actionSystem.AnAction;
 import com.intellij.openapi.actionSystem.AnActionEvent;
 import com.intellij.openapi.actionSystem.CommonDataKeys;
@@ -12,13 +14,16 @@ import com.intellij.openapi.project.Project;
 import com.intellij.openapi.ui.Messages;
 import com.intellij.psi.PsiFile;
 import com.intellij.psi.impl.source.PsiJavaFileImpl;
-import groovy.util.logging.Slf4j;
+
+import java.awt.*;
+import java.awt.datatransfer.Clipboard;
+import java.awt.datatransfer.StringSelection;
+import java.awt.datatransfer.Transferable;
 
 /**
  * @author zhoujun5
  * @date 2019-05-13 10:35
  */
-@Slf4j
 public class CfHtmlGeneratorAction extends AnAction {
     @Override
     public void actionPerformed(AnActionEvent e) {
@@ -28,23 +33,18 @@ public class CfHtmlGeneratorAction extends AnAction {
         if (editor == null){
             return;
         }
+        //获取当前类文件的路径
+        String classPath = PsiUtils.getSrcPath(psiFile);
+        if(classPath==null){
+            return ;
+        }
         SelectionModel selectionModel = editor.getSelectionModel();
         String methodName=selectionModel.getSelectedText();
-        //获取当前类文件的路径
-        String classPath = psiFile.getVirtualFile().getPath();
-        if(classPath==null){
-            return ;
-        }
-        classPath=classPath.split("/src/main/java/")[0];
-        if(classPath==null){
-            return ;
-        }
         String interfaceName=((PsiJavaFileImpl)psiFile).getPackageName()+"/"+psiFile.getName().split(".java")[0]+"#"+methodName;
-        //配置项目内的java路径 默认为/src/main/java/
-        System.setProperty("project.java.path","/src/main/java/");
         try{
             DocGenerator docGenerator = new ConfluenceDocGenerator(classPath);
-            docGenerator.write2Console(interfaceName);
+            DocInfo docInfo = docGenerator.generate(interfaceName);
+            setSysClipboardText(docInfo.getContent());
         }catch (Exception ex){
             Messages.showMessageDialog(project,
                     "报错啦"+ex.getMessage(),
@@ -56,5 +56,11 @@ public class CfHtmlGeneratorAction extends AnAction {
                 "接口html已经复制到粘贴板，去CF粘贴吧~~",
                 "结果",
                 Messages.getInformationIcon());
+    }
+
+    private void setSysClipboardText(String writeMe) {
+        Clipboard clip = Toolkit.getDefaultToolkit().getSystemClipboard();
+        Transferable tText = new StringSelection(writeMe);
+        clip.setContents(tText, null);
     }
 }
