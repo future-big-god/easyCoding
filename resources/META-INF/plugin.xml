@@ -1,41 +1,30 @@
 <idea-plugin>
   <id>com.your.company.unique.plugin.id</id>
-  <name>Plugin display name here</name>
+  <name>easyCoding utils</name>
   <version>1.0</version>
-  <vendor email="support@yourcompany.com" url="http://www.yourcompany.com">YourCompany</vendor>
-
-  <description><![CDATA[
-      Enter short description for your plugin here.<br>
-      <em>most HTML tags may be used</em>
-    ]]></description>
-
-  <change-notes><![CDATA[
-      Add change notes here.<br>
-      <em>most HTML tags may be used</em>
-    ]]>
+  <description>快乐编程的小工具，目前提供的功能有一键生成api，一键生成convert代码，欢迎食用，同时期待你的宝贵意见</description>
+  <change-notes>
+    1.0：不知道什么时候发了第一版
+    1.1：不知道什么时候会发第二版
+    。。。。。。
   </change-notes>
 
-  <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/build_number_ranges.html for description -->
-  <idea-version since-build="173.0"/>
-
-  <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/plugin_compatibility.html
-       on how to target different products -->
-  <!-- uncomment to enable plugin in all products
-  <depends>com.intellij.modules.lang</depends>
-  -->
+  <idea-version since-build="171.0"/>
 
   <extensions defaultExtensionNs="com.intellij">
     <!-- Add your extensions here -->
   </extensions>
 
   <actions>
+    <!--类型转换工具-->
     <action id="com.dev.tools.kit.easycoding.gen.copybean.BeanCopyAction" class="com.dev.tools.kit.easycoding.gen.copybean.BeanCopyAction" text="copybean" description="copybean">
       <add-to-group group-id="GenerateGroup" anchor="last"/>
     </action>
+    <!--api生成工具-->
     <action id="com.dev.tools.kit.easycoding.gen.apidoc.CfHtmlGeneratorAction" class="com.dev.tools.kit.easycoding.gen.apidoc.CfHtmlGeneratorAction" text="一键生成api">
       <add-to-group group-id="EditorLangPopupMenu" anchor="first"/>
     </action>
-
+    <!--根据bean生成 table column的json-->
     <action id="com.dev.tools.kit.easycoding.gen.table.columns.TableColumnsGeneratorAction" class="com.dev.tools.kit.easycoding.gen.table.columns.TableColumnsGeneratorAction" text="生成Columns">
       <add-to-group group-id="EditorLangPopupMenu" anchor="first"/>
     </action>
