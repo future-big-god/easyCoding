@@ -1,5 +1,5 @@
 <idea-plugin>
-  <id>com.your.company.unique.plugin.id</id>
+  <id>com.dev.tools.kit.easycoding</id>
   <name>easyCoding utils</name>
   <version>1.0</version>
   <description>快乐编程的小工具，目前提供的功能有一键生成api，一键生成convert代码，欢迎食用，同时期待你的宝贵意见</description>

@@ -40,7 +40,7 @@ public class CfHtmlGeneratorAction extends AnAction {
         }
         SelectionModel selectionModel = editor.getSelectionModel();
         String methodName=selectionModel.getSelectedText();
-        String interfaceName=((PsiJavaFileImpl)psiFile).getPackageName()+"/"+psiFile.getName().split(".java")[0]+"#"+methodName;
+        String interfaceName=((PsiJavaFileImpl)psiFile).getPackageName()+"."+psiFile.getName().split(".java")[0]+"#"+methodName;
         try{
             DocGenerator docGenerator = new ConfluenceDocGenerator(classPath);
             DocInfo docInfo = docGenerator.generate(interfaceName);
