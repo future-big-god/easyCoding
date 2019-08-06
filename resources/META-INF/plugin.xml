@@ -1,8 +1,10 @@
 <idea-plugin>
   <id>com.dev.tools.kit.easycoding</id>
   <name>easyCoding utils</name>
-  <version>1.0</version>
-  <description>快乐编程的小工具，目前提供的功能有一键生成api，一键生成convert代码，欢迎食用，同时期待你的宝贵意见</description>
+  <version>1.1</version>
+  <description>
+    Happy programming gadgets, currently available features a key to generate api, one-click generate convert code, welcome to eat, and look forward to your valuable comments
+      </description>
   <change-notes>
     1.0：不知道什么时候发了第一版
     1.1：不知道什么时候会发第二版
@@ -10,6 +12,8 @@
   </change-notes>
 
   <idea-version since-build="171.0"/>
+
+  <vendor url="http://www.bigGod.github,io" email="1253641040@qq.com" />
 
   <extensions defaultExtensionNs="com.intellij">
     <!-- Add your extensions here -->
